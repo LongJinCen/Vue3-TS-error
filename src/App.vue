@@ -1,22 +1,24 @@
 <template>
-  <span>
-    {{ hintMsg }}
-  </span>
-  <span>{{ iconName }}</span>
+  <div>
+    {{ value }}
+  </div>
 </template>
+<script lang="ts" setup>
 
-<script setup lang="ts">
-import { ref } from 'vue'
 interface Props {
-  hintMsg: string;
-  iconName: string;
+  value?: number
 }
-
-withDefaults(defineProps<Props>(), {
-  hintMsg: '',
-  iconName: 'question'
+const props = withDefaults(defineProps<Props>(), {
+  value: 1
 })
 
-const hint = ref(null)
+console.log(props.value);
+
+function test(value: number) {
+  console.log(value);
+}
+
+// error
+test(props.value)
 
 </script>
