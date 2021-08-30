@@ -2,7 +2,8 @@
   "name": "vue3-ts-error",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js"
+    "build": "webpack --config ./webpack.config.js",
+    "build-without-webpack": "node ./build-without-webpack.js"
   },
   "author": "",
   "license": "ISC",
