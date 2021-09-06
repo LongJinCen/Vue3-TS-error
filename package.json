@@ -17,7 +17,6 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
-    "@okee-uikit/vue3": "^0.1.12",
     "vue": "^3.2.9"
   }
 }
