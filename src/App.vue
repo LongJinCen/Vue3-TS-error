@@ -1,9 +1,10 @@
 <template>
-  <div>
-    {{ value }}
+  <div ref="hint">
+    {{ props.value }}
   </div>
 </template>
 <script lang="ts" setup>
+import { ref } from "@vue/reactivity";
 
 interface Props {
   value?: number
@@ -12,13 +13,6 @@ const props = withDefaults(defineProps<Props>(), {
   value: 1
 })
 
-console.log(props.value);
-
-function test(value: number) {
-  console.log(value);
-}
-
-// error
-test(props.value)
+const hint = ref()
 
 </script>
